@@ -26,7 +26,6 @@ type
 
 var
   swForm: TswForm;
-  //time: TDateTime;
   deadline: TDateTime;
   timer : TTimer;
   hour, min, sec, milli : Word;
@@ -47,22 +46,12 @@ begin
    timer.Interval := 10;
    timer.OnTimer := swForm.ShowRemaning;
    timer.Enabled := true;
-
-   {
-   time := EncodeDateTime(2019, 1, 1, 1, 5, 0, 0);
-   timer := TTimer.Create(nil);
-   timer.Enabled := false;
-   timer.Interval := 10;
-   timer.OnTimer := swForm.OnTimer;
-   timer.Enabled := true;
-   }
 end;
 
 procedure TswForm.ShowRemaning(Sender: TObject);
 var distance : TDateTime;
 
 begin
-//  TTimeSpan distance := deadline. ;
   distance := deadline - Now;
 
   if(distance < 0) then timer.Enabled := false;
@@ -72,14 +61,6 @@ begin
   swForm.lblMinute.Text := IntToStr(min);
   swForm.lblSecond.Text := IntToStr(sec);
   swForm.lblMilliSecond.Text := IntToStr(milli);
-
-
-  {
-  time := IncMilliSecond(time, -10);
-  swForm.lblMinute.Text := IntToStr(MinuteOf(time)).Substring(0, 2);
-  swForm.lblSecond.Text := IntToStr(SecondOf(time)).Substring(0, 2);
-  swForm.lblMiliSecond.Text := IntToStr(MilliSecondOf(time)).Substring(0, 2);
-  }
 end;
 
 end.

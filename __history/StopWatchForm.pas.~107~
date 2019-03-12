@@ -14,7 +14,7 @@ type
     lblMinute: TLabel;
     lblMtoS: TLabel;
     lblSecond: TLabel;
-    lblMiliSecond: TLabel;
+    lblMilliSecond: TLabel;
     lblStoM: TLabel;
     procedure StopWatchForm_OnCreate(Sender: TObject);
     procedure ShowRemaning(Sender: TObject);
@@ -67,7 +67,11 @@ begin
 
   if(distance < 0) then timer.Enabled := false;
 
-  distance.DecodeTime(&hour, &min, &sec, &milli);
+  DecodeTime(distance, hour, min, sec, milli);
+
+  swForm.lblMinute.Text := IntToStr(min);
+  swForm.lblSecond.Text := IntToStr(sec);
+  swForm.lblMilliSecond.Text := IntToStr(milli);
 
 
   {
