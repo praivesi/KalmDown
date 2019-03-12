@@ -1,0 +1,25 @@
+unit StopWatchManager;
+
+interface
+
+uses
+  SysUtils, DateUtils, FMX.Types, StopWatchForm;
+
+Type
+  TStopWatchManager = class
+    time : TDateTime;
+    procedure Run();
+  end;
+
+var
+ swManager : TStopWatchManager;
+
+implementation
+procedure TStopWatchManager.Run();
+begin
+  time := EncodeDateTime(0, 0, 0, 0, 5, 0, 0);
+  swForm.lblMinute.Text := IntToStr(MinuteOf(time));
+end;
+
+
+end.

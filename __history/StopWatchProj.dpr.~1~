@@ -1,0 +1,15 @@
+program StopWatchProj;
+
+uses
+  System.StartUpCopy,
+  FMX.Forms,
+  StopWatchForm in 'StopWatchForm.pas' {swForm},
+  StopWatchManager in 'StopWatchManager.pas';
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.CreateForm(TswForm, swForm);
+  Application.Run;
+end.

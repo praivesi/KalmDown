@@ -1,0 +1,72 @@
+object swForm: TswForm
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 193
+  ClientWidth = 607
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnCreate = StopWatchForm_OnCreate
+  DesignerMasterStyle = 0
+  object lblMinute: TLabel
+    StyledSettings = [Family, Style, FontColor]
+    Position.X = 48.000000000000000000
+    Position.Y = 16.000000000000000000
+    Size.Width = 121.000000000000000000
+    Size.Height = 169.000000000000000000
+    Size.PlatformDefault = False
+    TextSettings.Font.Size = 80.000000000000000000
+    TextSettings.HorzAlign = Center
+    Text = '00'
+    TabOrder = 4
+  end
+  object lblMtoS: TLabel
+    StyledSettings = [Family, Style, FontColor]
+    Position.X = 160.000000000000000000
+    Position.Y = 16.000000000000000000
+    Size.Width = 73.000000000000000000
+    Size.Height = 161.000000000000000000
+    Size.PlatformDefault = False
+    TextSettings.Font.Size = 80.000000000000000000
+    TextSettings.HorzAlign = Center
+    Text = ':'
+    TabOrder = 1
+  end
+  object lblSecond: TLabel
+    StyledSettings = [Family, Style, FontColor]
+    Position.X = 232.000000000000000000
+    Position.Y = 16.000000000000000000
+    Size.Width = 121.000000000000000000
+    Size.Height = 169.000000000000000000
+    Size.PlatformDefault = False
+    TextSettings.Font.Size = 80.000000000000000000
+    TextSettings.HorzAlign = Center
+    Text = '00'
+    TabOrder = 3
+  end
+  object lblMilliSecond: TLabel
+    StyledSettings = [Family, Style, FontColor]
+    Position.X = 416.000000000000000000
+    Position.Y = 16.000000000000000000
+    Size.Width = 153.000000000000000000
+    Size.Height = 169.000000000000000000
+    Size.PlatformDefault = False
+    TextSettings.Font.Size = 80.000000000000000000
+    TextSettings.HorzAlign = Center
+    Text = '000'
+    TabOrder = 2
+  end
+  object lblStoM: TLabel
+    StyledSettings = [Family, Style, FontColor]
+    Position.X = 336.000000000000000000
+    Position.Y = 16.000000000000000000
+    Size.Width = 73.000000000000000000
+    Size.Height = 161.000000000000000000
+    Size.PlatformDefault = False
+    TextSettings.Font.Size = 80.000000000000000000
+    TextSettings.HorzAlign = Center
+    Text = ':'
+    TabOrder = 0
+  end
+end
